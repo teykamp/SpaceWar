@@ -1,10 +1,22 @@
-var canvas:any = document.getElementById("canvas");
-console.log("logged")
-export var ctx:any = canvas.getContext("2d");
-export const WIDTH:number = window.innerWidth;
-export const HEIGHT:number = window.innerHeight;
+
+const width:number = window.innerWidth;
+const height:number = window.innerHeight;
 
 // Game State ///////////////////////////////////////////////
-export const tickSpeed:number = 1;
+const tickSpeed:number = 1;
 
 // Banance Changes //////////////////////////////////////////
+
+
+
+
+
+
+// Export
+enum CONSTANTS {
+    WIDTH = width,
+    HEIGHT = height,
+    TICKSPEED = tickSpeed
+};
+
+export default CONSTANTS;

@@ -1,17 +1,19 @@
-import * as constants from "./constants";
+import CONSTANTS from "./constants.js";
+
+var canvas:any = document.getElementById("canvas");
+var ctx:any = canvas.getContext("2d");
 
 function canvasInit():void {
-    console.log("hfjsdkfhjks")
-    constants.ctx.canvas.width = constants.WIDTH;
-    constants.ctx.canvas.height = constants.HEIGHT;
-    setInterval(draw, 60*constants.tickSpeed);
+    ctx.canvas.width = CONSTANTS.WIDTH;
+    ctx.canvas.height = CONSTANTS.HEIGHT;
+    setInterval(draw, 60 * CONSTANTS.TICKSPEED);
 }
 
 function draw():void {
-    constants.ctx.clearRect(0, 0, constants.WIDTH, constants.HEIGHT)
-    constants.ctx.moveTo(0, 0);
-    constants.ctx.lineTo(200, 100);
-    constants.ctx.stroke();
+    ctx.clearRect(0, 0, CONSTANTS.WIDTH, CONSTANTS.HEIGHT)
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
 }
 
 canvasInit();

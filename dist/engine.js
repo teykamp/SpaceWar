@@ -1,35 +1,15 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var constants = __importStar(require("./constants"));
+import CONSTANTS from "./constants.js";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 function canvasInit() {
-    console.log("hfjsdkfhjks");
-    constants.ctx.canvas.width = constants.WIDTH;
-    constants.ctx.canvas.height = constants.HEIGHT;
-    setInterval(draw, 60 * constants.tickSpeed);
+    ctx.canvas.width = CONSTANTS.WIDTH;
+    ctx.canvas.height = CONSTANTS.HEIGHT;
+    setInterval(draw, 60 * CONSTANTS.TICKSPEED);
 }
 function draw() {
-    constants.ctx.clearRect(0, 0, constants.WIDTH, constants.HEIGHT);
-    constants.ctx.moveTo(0, 0);
-    constants.ctx.lineTo(200, 100);
-    constants.ctx.stroke();
+    ctx.clearRect(0, 0, CONSTANTS.WIDTH, CONSTANTS.HEIGHT);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
 }
 canvasInit();
