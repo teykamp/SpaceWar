@@ -4,19 +4,23 @@ const height:number = window.innerHeight;
 
 // Game State ///////////////////////////////////////////////
 const tickSpeed:number = 1;
+const gravity:number = 1;
+const health = 10;
+
+export enum gameState {
+    MENU,
+    FIGHT,
+    END,
+}
 
 // Banance Changes //////////////////////////////////////////
 
 
-
-
-
-
 // Export
-enum CONSTANTS {
+export enum CONSTANTS {
     WIDTH = width,
     HEIGHT = height,
-    TICKSPEED = tickSpeed
+    TICKSPEED = tickSpeed,
+    GRAVITY = gravity,
+    HEALTH = health,
 };
-
-export default CONSTANTS;
