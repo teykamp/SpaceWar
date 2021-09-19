@@ -1,13 +1,13 @@
 
-const width:number = window.innerWidth;
-const height:number = window.innerHeight;
+const WIDTH:number = window.innerWidth;
+const HEIGHT:number = window.innerHeight;
 
 // Game State ///////////////////////////////////////////////
-const tickSpeed:number = 1;
-const gravity:number = 1;
-const health = 10;
+const TICKSPEED:number = 1;
+const GRAVITY:number = 1;
+const HEALTH = 10;
 
-export enum gameState {
+enum gameState {
     MENU,
     FIGHT,
     END,
@@ -17,10 +17,4 @@ export enum gameState {
 
 
 // Export
-export enum CONSTANTS {
-    WIDTH = width,
-    HEIGHT = height,
-    TICKSPEED = tickSpeed,
-    GRAVITY = gravity,
-    HEALTH = health,
-};
+export default {WIDTH, HEIGHT, TICKSPEED, GRAVITY, HEALTH, gameState};

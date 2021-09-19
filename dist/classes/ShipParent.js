@@ -1,4 +1,4 @@
-import { CONSTANTS } from "../constants";
+import CONSTANTS from "../constants";
 import Drawn from "./Drawn";
 export default class Ship extends Drawn {
     constructor(x, y, xVel, yVel, mass, scale, globalID, hitboxRadius, moveSpeed, shootSpeed) {

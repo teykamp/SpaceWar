@@ -1,4 +1,4 @@
-import { gameState, CONSTANTS } from "./constants";
+import CONSTANTS from "./constants";
 import Particle from "./classes/Particle";
 
 var instances:any = [];
@@ -22,6 +22,7 @@ function gameTick():void {
     ctx.clearRect(0, 0, CONSTANTS.WIDTH, CONSTANTS.HEIGHT)
     ctx.moveTo(0, 0);
     ctx.lineTo(200, 100);
+    // ctx.strokeStyle = "#000";
     ctx.stroke();
 }
 

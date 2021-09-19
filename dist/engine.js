@@ -1,4 +1,4 @@
-import { CONSTANTS } from "./constants";
+import CONSTANTS from "./constants";
 var instances = [];
 var particleInstances = [];
 var canvas = document.getElementById("canvas");
@@ -17,6 +17,7 @@ function gameTick() {
     ctx.clearRect(0, 0, CONSTANTS.WIDTH, CONSTANTS.HEIGHT);
     ctx.moveTo(0, 0);
     ctx.lineTo(200, 100);
+    // ctx.strokeStyle = "#000";
     ctx.stroke();
 }
 canvasInit();
