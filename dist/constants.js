@@ -1,10 +1,10 @@
-const width = window.innerWidth;
-const height = window.innerHeight;
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 // Game State ///////////////////////////////////////////////
-const tickSpeed = 1;
-const gravity = 1;
-const health = 10;
-export var gameState;
+const TICKSPEED = 1;
+const GRAVITY = 1;
+const HEALTH = 10;
+var gameState;
 (function (gameState) {
     gameState[gameState["MENU"] = 0] = "MENU";
     gameState[gameState["FIGHT"] = 1] = "FIGHT";
@@ -12,12 +12,4 @@ export var gameState;
 })(gameState || (gameState = {}));
 // Banance Changes //////////////////////////////////////////
 // Export
-export var CONSTANTS;
-(function (CONSTANTS) {
-    CONSTANTS[CONSTANTS["WIDTH"] = width] = "WIDTH";
-    CONSTANTS[CONSTANTS["HEIGHT"] = height] = "HEIGHT";
-    CONSTANTS[CONSTANTS["TICKSPEED"] = tickSpeed] = "TICKSPEED";
-    CONSTANTS[CONSTANTS["GRAVITY"] = gravity] = "GRAVITY";
-    CONSTANTS[CONSTANTS["HEALTH"] = health] = "HEALTH";
-})(CONSTANTS || (CONSTANTS = {}));
-;
+export default { WIDTH, HEIGHT, TICKSPEED, GRAVITY, HEALTH, gameState };
