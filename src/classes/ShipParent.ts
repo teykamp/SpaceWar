@@ -1,10 +1,10 @@
 import CONSTANTS  from "../constants";
 import Drawn from "./Drawn";
 
-export default class Ship extends Drawn {
+export default class ShipParent extends Drawn {
     health:number;
     private imageAngle:number;
-    private moveSpeed:number;
+    private moveSpeed:number; // adds to Accel
     private shootSpeed:number;
 
     constructor(x:number, y:number, xVel:number, yVel:number, mass:number, scale:number, globalID:number, hitboxRadius:number, moveSpeed:number, shootSpeed:number) {

@@ -15,6 +15,8 @@ enum gameState {
 
 // Banance Changes //////////////////////////////////////////
 
+const SUNSIZE:number = 300;
+const BULLETDAMAGE = 1;
 
 // Export
-export default {WIDTH, HEIGHT, TICKSPEED, GRAVITY, HEALTH, gameState};
+export default {WIDTH, HEIGHT, TICKSPEED, GRAVITY, HEALTH, SUNSIZE, BULLETDAMAGE, gameState};

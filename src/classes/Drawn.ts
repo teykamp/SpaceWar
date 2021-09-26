@@ -6,6 +6,7 @@ export default class Drawn {
     xAccel:number;
     yAccel:number;
     mass:number;
+    toDelete:boolean;
     private scale:number;
     private hitboxRadius:number;
     private globalID:number;
@@ -18,9 +19,14 @@ export default class Drawn {
         this.xAccel = 0;
         this.yAccel = 0;
         this.mass = mass;
+        this.toDelete = false;
         this.scale = scale;
         this.globalID = globalID;
         this.hitboxRadius = hitboxRadius;
+    }
+
+    destroySelf():void {
+        this.toDelete = true;
     }
 
     distanceTo(x:number, y:number):number {

@@ -1,7 +1,8 @@
 import CONSTANTS from "./constants";
 import Particle from "./classes/Particle";
 
-var instances:any = [];
+var noCollisionInstances:any = []; // bullets etc.
+var collisionInstances:any = []; // ships, sun etc.
 var particleInstances:Particle[] = [];
 var canvas:any = document.getElementById("canvas");
 var ctx:any = canvas.getContext("2d");
@@ -26,4 +27,4 @@ function gameTick():void {
     ctx.stroke();
 }
 
-canvasInit();
+canvasInit(); 
